@@ -1,0 +1,143 @@
+form[data-component="form-roterizador"] {}
+form[data-component="form-roterizador"] div[data-field] {
+  padding: 5px;
+  overflow: hidden;
+}
+
+form[data-component="form-roterizador"] div[data-field] label {
+  overflow: hidden;
+  font-size: 14px;
+  display: block;
+}
+
+form[data-component="form-roterizador"] {
+  float: left;
+  width: 290px;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+form[data-component="form-roterizador"] div[data-field] div {
+  border: solid 1px #DDD;
+  height: 30px;
+  width: 278px;
+  margin-top: 5px;
+}
+
+form[data-component="form-roterizador"] div[data-field] div i {
+  width: 30px;
+  height: 30px;
+  border-right: solid 1px #DDD;
+  float: left;
+  line-height: 30px;
+  font-size: 11px;
+  text-align: center;
+}
+
+form[data-component="form-roterizador"] div[data-field] div input {
+  width: 223px;
+  height: 30px;
+  border: none;
+  padding: 0px 10px;
+}
+
+form[data-component="form-roterizador"] div[data-field="with-button"] {}
+form[data-component="form-roterizador"] div[data-field="with-button"] div {
+  width: 240px;
+  float: left;
+}
+
+form[data-component="form-roterizador"] div[data-field="with-button"] div input {
+  width: 178px;
+}
+
+form[data-component="form-roterizador"] div[data-field="with-button"] button,
+form[data-component="form-roterizador"] button[data-button-submit] {
+  height: 32px;
+  width: 33px;
+  margin: 5px;
+  margin-right: 0px;
+  border-radius: 0px;
+  border: solid 1px #DDD;
+  background: transparent;
+  font-size: 13px;
+  cursor: pointer;
+  float: left;
+}
+
+form[data-component="form-roterizador"] button[data-button-submit] {
+  width: 280px;
+  text-align: left;
+}
+
+form[data-component="form-roterizador"] button[data-button-submit] i {
+  float: left;
+  border-right: solid 1px #DDD;
+  padding: 0px 9px;
+  margin-right: 9px;
+}
+
+form[data-component="form-roterizador"] ul[data-list-location] {
+  z-index: 10;
+  position: absolute;
+  width: 240px;
+  border: solid 1px #DDD;
+  border-top: none;
+  border-bottom: none;
+  margin-left: -1px;
+  background: #FFF;
+}
+
+form[data-component="form-roterizador"] ul li {
+  font-size: 13px;
+  overflow: hidden;
+  padding: 10px 0px;
+  display: block;
+  border-top: solid 1px #DDD
+}
+
+form[data-component="form-roterizador"] ul li:last-child {
+  border-bottom: solid 1px #DDD;
+}
+
+form[data-component="form-roterizador"] ul li[data-loading-places] {
+  padding: 10px;
+}
+
+form[data-component="form-roterizador"] ul li i {
+  float: left;
+  width: 10px;
+  height: 30px;
+  margin-right: 0px;
+  border: none !important;
+}
+
+form[data-component="form-roterizador"] ul li p,
+form[data-component="form-roterizador"] ul li span {
+  float: right;
+  width: 200px;
+  font-size: 15px;
+  padding-right: 10px;
+}
+
+form[data-component="form-roterizador"] ul li span {
+  font-size: 13px;
+}
+
+form[data-component="form-roterizador"] div[data-field] ul li p,
+form[data-component="form-roterizador"] div[data-field] ul li span {
+  width: 238px;
+}
+
+form[data-component="form-roterizador"] div[data-field] ul[data-list-location] {
+  width: 278px;
+}
+
+form[data-component="form-roterizador"] div[data-field="with-button"] ul li p,
+form[data-component="form-roterizador"] div[data-field="with-button"] ul li span {
+  width: 200px;
+}
+
+form[data-component="form-roterizador"] div[data-field="with-button"] ul[data-list-location] {
+  width: 240px;
+}

@@ -1,0 +1,71 @@
+div[data-component="block-404"] {
+  left: 0px;
+  right: 0px;
+  bottom: 40px;
+  top: 0px;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+}
+
+div[data-component="block-404"] div[data-block] {
+    width: 430px;
+    overflow: hidden;
+    background: #FFF;
+    border-radius: 2px;
+    min-height: 0px;
+    padding: 20px;
+    border: solid 1px #DDD;
+    box-shadow: 0px 0px 8px #DDD;
+}
+
+div[data-component="block-404"] div[data-block] h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+div[data-component="block-404"] div[data-block] p[data-description] {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+div[data-component="block-404"] div[data-block] p[data-link] {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+div[data-component="block-404"] div[data-block] p[data-or] {
+  width: 200px;
+  margin: 0 auto;
+  border-bottom: solid 1px #DDD;
+
+}
+
+div[data-component="block-404"] div[data-block] p[data-or] span {
+  width: 40px;
+  height: 20px;
+  background: #FFF;
+  margin: 0 auto;
+  padding: 10px;
+  display: block;
+  margin-bottom: -21px;
+  text-align: center;
+  color: #555;
+  font-size: 13px;
+}
+
+div[data-component="block-404"] div[data-block] p[data-link-back] {
+  text-align: center;
+  margin: 10px;
+  margin-top: 20px;
+  display: block;
+  color: #555;
+}
