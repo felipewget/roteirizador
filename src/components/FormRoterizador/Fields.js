@@ -1,11 +1,8 @@
 import React,
-      { Component } from 'react';
-
+      { Component }         from 'react';
 import PlacesAutocomplete,
-       {
-        geocodeByAddress,
-        getLatLng,
-       } from 'react-places-autocomplete';
+       {  geocodeByAddress,
+          getLatLng     }   from 'react-places-autocomplete';
 
 class Fields extends Component {
 

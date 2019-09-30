@@ -1,10 +1,8 @@
 import React,
        { Component }            from 'react';
 import { Link }                 from 'react-router-dom';
-
 import {  register,
-          login            } from './../../actions/authAction';
-
+          login            }    from './../../actions/authAction';
 import './../FormLogin/index.css';
 
 class FormRegister extends Component {

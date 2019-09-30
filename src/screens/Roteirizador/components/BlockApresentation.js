@@ -1,6 +1,7 @@
 import React,
-       { Component, Fragment }            from 'react';
-import { Link }                 from 'react-router-dom';
+       { Component,
+         Fragment }     from 'react';
+import { Link }         from 'react-router-dom';
 
 class BlockApresentation extends Component {
 

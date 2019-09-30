@@ -24,6 +24,9 @@ let particles_settings = {
       }
     };
 
+/**
+ *  Tela de 404
+ */
 class Page404 extends Component {
 
   constructor( props )

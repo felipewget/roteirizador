@@ -3,12 +3,12 @@ import React,
 import Footer                   from './../../components/Footer';
 import FormRegister             from './../../components/FormRegister';
 import { getLanguage }          from './../../components/i18n';
-
 import LoadingScreen            from './../../components/LoadingScreen';
-
 import {  isAuthenticated     } from './../../actions/authAction';
 
-
+/**
+ *  Tela de Registrp
+ */
 class Login extends Component {
 
   constructor( props )

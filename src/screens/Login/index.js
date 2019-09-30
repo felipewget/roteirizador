@@ -4,9 +4,11 @@ import Footer                   from './../../components/Footer';
 import FormLogin                from './../../components/FormLogin';
 import { getLanguage }          from './../../components/i18n';
 import LoadingScreen            from './../../components/LoadingScreen';
-
 import {  isAuthenticated  }    from './../../actions/authAction';
 
+/**
+ *  Tela de Login
+ */
 class Login extends Component {
 
   constructor( props )

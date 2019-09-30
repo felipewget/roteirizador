@@ -1,48 +1,48 @@
 div[data-component="preview-roterizador"] {
-  margin: 10px;
-  display: block;
-  overflow: hidden;
-  width: 280px;
-  border-top: solid 1px #DDD;
-  padding-top: 5px;
+  margin        : 10px;
+  display       : block;
+  overflow      : hidden;
+  width         : 280px;
+  border-top    : solid 1px #DDD;
+  padding-top   : 5px;
 }
 
 div[data-component="preview-roterizador"] p {
-  overflow: hidden;
-  color: #666;
-  font-size: 14px;
-  margin-top: 5px;
+  overflow    : hidden;
+  color       : #666;
+  font-size   : 14px;
+  margin-top  : 5px;
 }
 
 div[data-component="preview-roterizador"] p span {
-  color: #444;
-  font-size: 15px;
+  color     : #444;
+  font-size : 15px;
 }
 
 div[data-component="preview-roterizador"] div[data-block-route-data] {
-  border-bottom: solid 1px #DDD;
-  padding: 10px;
-  margin: 10px;
-  margin-bottom: 0px;
-  font-size: 13px;
-  overflow: hidden;
+  border-bottom :  solid 1px #DDD;
+  padding       : 10px;
+  margin        : 10px;
+  margin-bottom : 0px;
+  font-size     : 13px;
+  overflow      : hidden;
 }
 
 div[data-component="preview-roterizador"] div[data-block-route-data] div {
-  float: right;
-  width: 200px;
+  float     : right;
+  width     : 200px;
   min-height: 0px;
-  overflow: hidden;
+  overflow  : hidden;
 }
 
 div[data-component="preview-roterizador"] div[data-block-route-data] i {
-  float: left;
-  width: 10px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
+  float     : left;
+  width     : 10px;
+  height    : 30px;
+  text-align  : center;
+  line-height : 30px;
 }
 
 div[data-component="preview-roterizador"] div[data-block-route-data] div p {
-  margin-top: 5px;
+  margin-top  : 5px;
 }

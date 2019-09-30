@@ -1,6 +1,5 @@
 import React,
       { Component } from 'react';
-
 import './index.css'
 
 class Languages extends Component {

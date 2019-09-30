@@ -1,97 +1,97 @@
 div[data-component="form-login"] {
-  left: 0px;
-  right: 0px;
-  bottom: 40px;
-  top: 0px;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
+  left      : 0px;
+  right     : 0px;
+  bottom    : 40px;
+  top       : 0px;
+  padding   : 0;
+  margin    : 0;
+  display   : -webkit-box;
+  display   : -moz-box;
+  display   : -ms-flexbox;
+  display   : -webkit-flex;
+  display   : flex;
+  align-items     : center;
+  justify-content : center;
+  position        : fixed;
 }
 
 div[data-component="form-login"] form {
-  width: 350px;
-  min-height: 200px;
-  border: solid 1px #DDD;
-  box-shadow: 0px 0px 8px #DDD;
+  width       : 350px;
+  min-height  : 200px;
+  border      : solid 1px #DDD;
+  box-shadow  : 0px 0px 8px #DDD;
 }
 
 div[data-component="form-login"] form div[data-header]{
-  display: block;
+  display : block;
 }
 
 div[data-component="form-login"] form div[data-header] i {
-  margin: 0 auto;
-  display: block;
+  margin    : 0 auto;
+  display   : block;
   text-align: center;
-  font-size: 32px;
+  font-size : 32px;
   margin-top: 30px;
 }
 
 div[data-component="form-login"] form div[data-header] h1 {
-  text-align: center;
-  line-height: 25px;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  text-align    : center;
+  line-height   : 25px;
+  margin-top    : 10px;
+  margin-bottom : 30px;
 }
 
 div[data-component="form-login"] form div[data-field] {
-  overflow: hidden;
-  width: 328px;
-  margin: 5px 10px;
-  height: 30px;
-  border: solid 1px #DDD;
+  overflow      : hidden;
+  width         : 328px;
+  margin        : 5px 10px;
+  height        : 30px;
+  border        : solid 1px #DDD;
 }
 
 div[data-component="form-login"] form div[data-field] i {
-  float: left;
-  height: 30px;
-  width: 30px;
+  float       : left;
+  height      : 30px;
+  width       : 30px;
   border-right: solid 1px #DDD;
-  text-align: center;
-  line-height: 30px;
+  text-align  : center;
+  line-height : 30px;
 }
 
 div[data-component="form-login"] form div[data-field] input {
-  width: 276px;
-  border: none;
-  height: 20px;
-  padding: 5px 10px;
+  width     : 276px;
+  border    : none;
+  height    : 20px;
+  padding   : 5px 10px;
 }
 
 div[data-component="form-login"] form button[data-submit] {
-  width: 330px;
-  border: solid 1px #DDD;
-  margin: 10px;
-  height: 30px;
+  width   : 330px;
+  border  : solid 1px #DDD;
+  margin  : 10px;
+  height  : 30px;
 }
 
 div[data-component="form-login"] form p[data-error] {
-  font-size: 13px;
-  color: #CC0000;
-  padding: 10px;
+  font-size : 13px;
+  color     : #CC0000;
+  padding   : 10px;
   text-align: center;
 }
 
 div[data-component="form-login"] form p[data-link] {
-  text-align: center;
-  font-size: 13px;
-  color: #555;
-  margin-bottom: 20px;
+  text-align  : center;
+  font-size   : 13px;
+  color       : #555;
+  margin-bottom : 20px;
 }
 
 div[data-component="form-login"] form[data-form-type="loading"] * {
-    display: none;
+  display : none;
 }
 
 div[data-component="form-login"] form[data-form-type="loading"] {
-  background: url('./../../assets/images/oval.svg')no-repeat;
-  background-position: center 110px;
-  background-size: 30px 30px;
+  background            : url('./../../assets/images/oval.svg')no-repeat;
+  background-position   : center 110px;
+  background-size       : 30px 30px;
 }

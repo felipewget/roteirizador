@@ -1,14 +1,12 @@
 div[data-component="load-screen"] i[data-spinner] {
-
-  background: url('./../../assets/images/oval.svg')no-repeat;
-  background-position: center center;
-  background-size: 30px 30px;
-  width: 30px;
-  height: 30px;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  margin-top: -15px;
-  margin-left: -15px;
-
+  background  : url('./../../assets/images/oval.svg')no-repeat;
+  background-position : center center;
+  background-size     : 30px 30px;
+  width     : 30px;
+  height    : 30px;
+  position  : fixed;
+  left      : 50%;
+  top       : 50%;
+  margin-top  : -15px;
+  margin-left : -15px;
 }

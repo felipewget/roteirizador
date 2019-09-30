@@ -7,20 +7,18 @@ import PreviewRoterizador       from './../../components/PreviewRoterizador';
 import { getLanguage }          from './../../components/i18n';
 import PerfectScrollbar         from 'react-perfect-scrollbar';
 import { withScriptjs }         from 'react-google-maps';
-
-import { loadDirections } from './../../actions/mapAction';
-import Map from './../../components/Map';
-
-import TabHistory         from './components/TabHistory';
-
+import { loadDirections }       from './../../actions/mapAction';
+import LoadingScreen            from './../../components/LoadingScreen';
+import Map                      from './../../components/Map';
+import TabHistory               from './components/TabHistory';
 import {  isAuthenticated,
           loggout             } from './../../actions/authAction';
-
 import {  addRoute,
-          listRoutes        } from './../../actions/routeAction';
+          listRoutes        }   from './../../actions/routeAction';
 
-import LoadingScreen            from './../../components/LoadingScreen';
-
+/**
+ *  Tela do Renderizador
+ */
 class Roteirizador extends Component {
 
   constructor( props )

@@ -1,96 +1,56 @@
 @import url("fonts.css");
 
 * {
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Roboto', sans-serif;
-  outline: none;
-  text-decoration: none;
+  margin          : 0px;
+  padding         : 0px;
+  font-family     : 'Roboto', sans-serif;
+  outline         : none;
+  text-decoration : none;
 }
 
 ul {
-  list-style: none;
+  list-style  : none;
 }
 
 .container-page.hidden {
-  overflow: hidden;
-}
-
-.f-right {
-  float: right;
-}
-
-.m5 {
-  margin: 5px;
-}
-
-.m15 {
-  margin: 15px;
-}
-
-.m30 {
-  margin: 30px;
-}
-
-.m50 {
-  margin: 50px;
-}
-
-.bg-dark {
-  background: #151b26;
-}
-
-.bg-colored {
-  background: rgb(225,228,232); /*﻿#e1e4e8;*/
-  box-shadow: inset 0px 0px 5px #CCC;
-}
-
-.cl3 {
-  width: 390px;
-  float: left;
-  min-height: 0px;
-  overflow: hidden;
+  overflow  : hidden;
 }
 
 /* Buttons */
 
 button[data-glass],
 button[data-colored]{
-  height: 30px;
-  padding: 5px 20px;
-  border-radius: 3px;
-  border: solid 1px #335eea;
-  color: #335eea;
-  background: transparent;
-  font-size: 13px;
-  cursor: pointer;
+  height        : 30px;
+  padding       : 5px 20px;
+  border-radius : 3px;
+  border        : solid 1px #335eea;
+  color         : #335eea;
+  background    : transparent;
+  font-size     : 13px;
+  cursor        : pointer;
 }
 
 button[data-colored] {
-  color: #FFF;
-  background: #335eea;
+  color       : #FFF;
+  background  : #335eea;
 }
 
 button[data-simple] {
-  border: none;
-  background: transparent;
-  color: #555;
-  margin-left: 15px;
-  cursor: pointer;
-}
-
-button[data-glass="small"]{
-
+  border      : none;
+  background  : transparent;
+  color       : #555;
+  margin-left : 15px;
+  cursor      : pointer;
 }
 
 button[data-colored="big"]{
-  height: 40px;
-  font-size: 14px;
+  height    : 40px;
+  font-size : 14px;
 }
 
 button[data-glass="big"]{
-  height: 40px;
-  font-size: 14px;
+  height    : 40px;
+  font-size : 14px;
 }
 
 /* FOOTER */
@@ -140,188 +100,188 @@ div[data-container-form] h1 {
 
 div[data-container-maps],
 div[data-google-map] {
-  position: fixed;
-  right: 0px;
-  top: 0px;
-  left: 350px;
-  bottom: 40px;
-  width: calc(100% - 350px);;
-  background: #CCC;
+  position    : fixed;
+  right       : 0px;
+  top         : 0px;
+  left        : 350px;
+  bottom      : 40px;
+  width       : calc(100% - 350px);;
+  background  : #CCC;
 }
 
 div[data-container-maps] div[data-container-block-apresentation] {
-  position: fixed;
-  left: 350px;
-  top: 0px;
-  bottom: 40px;
-  right: 0px;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
+  position  : fixed;
+  left      : 350px;
+  top       : 0px;
+  bottom    : 40px;
+  right     : 0px;
+  padding   : 0;
+  margin    : 0;
+  display   : -webkit-box;
+  display   : -moz-box;
+  display   : -ms-flexbox;
+  display   : -webkit-flex;
+  display   : flex;
+  align-items     : center;
+  justify-content : center;
+  position        : fixed;
 }
 
 div[data-container-maps] div[data-container-apresentation] {
-  width: 500px;
-  min-height: 100px;
-  overflow: hidden;
-  border: solid 1px #CCC;
-  background: #FFF;
+  width       : 500px;
+  min-height  : 100px;
+  overflow    : hidden;
+  border      : solid 1px #CCC;
+  background  : #FFF;
 }
 
 div[data-container-apresentation] h1 {
-  font-size: 22px;
-  padding: 10px;
-  color: #444;
+  font-size : 22px;
+  padding   : 10px;
+  color     : #444;
 }
 
 div[data-container-apresentation] h1 span {
-    color: #333;
-    font-size: 23px;
+  color     : #333;
+  font-size : 23px;
 }
 
 div[data-container-apresentation] p,
 div[data-container-apresentation] ul {
-  padding: 0px 10px;
-  padding-bottom: 10px;
+  padding         : 0px 10px;
+  padding-bottom  : 10px;
 }
 
 div[data-container-apresentation] ul {
-  list-style: none;
+  list-style  : none;
 }
 
 div[data-container-apresentation] ul li {
-  padding: 10px 0px;
+  padding : 10px 0px;
 }
 
 div[data-container-maps] div[data-container-apresentation="loading"] * {
-  display: none;
+  display : none;
 }
 
 div[data-container-maps] div[data-container-apresentation="loading"] {
-  width: 40px;
-  height: 40px;
-  background: url('./../../assets/images/oval.svg')no-repeat;
-  background-position: center center;
-  background-size: 30px 30px;
+  width       : 40px;
+  height      : 40px;
+  background  : url('./../../assets/images/oval.svg')no-repeat;
+  background-position : center center;
+  background-size     : 30px 30px;
 }
 
 div[data-container-history] {
-  width: 300px;
-  left: 300px;
-  top: 0px;
-  bottom: 41px;
-  background: #EFEFEF;
-  border-right: solid 1px #DDD;
-  position: fixed;
-  z-index: 3;
-  overflow: hidden;
+  width   : 300px;
+  left    : 300px;
+  top     : 0px;
+  bottom  : 41px;
+  background    : #EFEFEF;
+  border-right  : solid 1px #DDD;
+  position      : fixed;
+  z-index       : 3;
+  overflow      : hidden;
 }
 
 div[data-container-history] div[data-header] {
-  border-bottom: solid 1px #DDD;
-  padding: 10px;
-  overflow: hidden;
+  border-bottom : solid 1px #DDD;
+  padding       : 10px;
+  overflow      : hidden;
 }
 
 div[data-container-history] div[data-header] p {
-  float: left;
-  font-size: 16px;
+  float       : left;
+  font-size   : 16px;
 }
 
 div[data-container-history] div[data-header] button {
-  float: right;
-  border: none;
-  background: transparent;
-  font-size: 14px;
-  padding: 5px;
-  cursor: pointer;
+  float       : right;
+  border      : none;
+  background  : transparent;
+  font-size   : 14px;
+  padding     : 5px;
+  cursor      : pointer;
 }
 
 div[data-history-block] {
-  border-bottom: solid 1px #DDD;
-  padding: 10px;
+  border-bottom : solid 1px #DDD;
+  padding       : 10px;
 }
 
 div[data-history-block] p {
-  font-size: 13px;
-  padding: 10px;
-  padding-top: 0px;
+  font-size : 13px;
+  padding   : 10px;
+  padding-top : 0px;
 }
 
 div[data-history-block] button {
-  border: none;
-  font-size: 14px;
-  padding: 10px;
-  background: transparent;
-  cursor: pointer;
+  border        : none;
+  font-size     : 14px;
+  padding       : 10px;
+  background    : transparent;
+  cursor        : pointer;
 }
 
 div[data-container-history] button[data-button-history] {
-  display: none;
+  display : none;
 }
 
 div[data-container-history="closed"] * {
-  display: none;
+  display : none;
 }
 
 div[data-container-history="closed"] {
-  transition: 0.5s;
-  width: 50px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
+  transition  : 0.5s;
+  width       : 50px;
+  display     : -webkit-box;
+  display     : -moz-box;
+  display     : -ms-flexbox;
+  display     : -webkit-flex;
+  display     : flex;
+  align-items : center;
   justify-content: center;
-  position: fixed;
-  cursor: pointer;
+  position    : fixed;
+  cursor      : pointer;
 }
 
 div[data-container-history="closed"] button[data-button-history] {
-  display: block;
-  border: none;
+  display   : block;
+  border    : none;
   background: transparent;
-  font-size: 18px;
-  cursor: pointer;
-  width: 50px;
+  font-size : 18px;
+  cursor    : pointer;
+  width     : 50px;
   text-align: center;
-  margin: 0px;
+  margin    : 0px;
 }
 
 button[data-button-loggout] {
-  float: right;
-  border: none;
-  background: transparent;
-  font-size: 18px;
-  cursor: pointer;
-  width: 50px;
-  text-align: center;
-  margin: 0px;
+  float       : right;
+  border      : none;
+  background  : transparent;
+  font-size   : 18px;
+  cursor      : pointer;
+  width       : 50px;
+  text-align  : center;
+  margin      : 0px;
 }
 
 p[data-info] {
-  padding: 10px;
-  text-align: center;
-  font-size: 13px;
+  padding     : 10px;
+  text-align  : center;
+  font-size   : 13px;
 }
 
 @media screen and (max-width: 750px) {
 
   div[data-container-history] {
-    display: none;
+    display : none;
   }
 
   div[data-container-maps], div[data-google-map] {
-    left: 300px;
-    width: calc(100% - 300px);
+    left  : 300px;
+    width : calc(100% - 300px);
   }
 
 }
@@ -329,42 +289,42 @@ p[data-info] {
 @media screen and (max-width: 600px) {
 
   div[data-container-maps], div[data-google-map] {
-    width: 100%;
-    height: 300px;
-    left: 0px;
+    width   : 100%;
+    height  : 300px;
+    left    : 0px;
     position: absolute;
   }
 
   div[data-container-form] {
     margin-top: 300px;
-    width: 100%;
-    position: inherit;
-    display: block;
-    overflow: hidden;
+    width     : 100%;
+    position  : inherit;
+    display   : block;
+    overflow  : hidden;
   }
 
   div[data-component="footer"] {
-    position: initial;
-    display: block;
-    width: 100%;
-    min-height: 40px;
-    overflow: hidden;
+    position    : initial;
+    display     : block;
+    width       : 100%;
+    min-height  : 40px;
+    overflow    : hidden;
   }
 
   form[data-component="form-roterizador"] {
-    display: block !important;
-    float: inherit !important;
-    width: 290px !important;
-    margin: 0 auto !important;
-    margin-top: 45px !important;
+    display : block !important;
+    float   : inherit !important;
+    width   : 290px !important;
+    margin  : 0 auto !important;
+    margin-top  : 45px !important;
   }
 
   div[data-component="preview-roterizador"] {
-    margin: 0 auto !important;
+    margin  : 0 auto !important;
   }
 
   div[data-component="footer"][data-type="resize-fixed"] {
-    position: fixed;
+    position  : fixed;
   }
 
 }

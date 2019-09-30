@@ -1,7 +1,6 @@
 import React,
       { Component } from 'react';
 import Fields       from './Fields';
-
 import './index.css';
 
 class FormRoterizador extends Component {

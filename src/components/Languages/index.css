@@ -1,84 +1,84 @@
 div[data-container-language] {
-    float: left;
+    float : left;
 }
 
 div[data-container-language] div[data-actual-language]{
-  float: left;
-  line-height: 17.5px;
-  margin-left: 10px;
-  font-size: 13px;
+  float       : left;
+  line-height : 17.5px;
+  margin-left : 10px;
+  font-size   : 13px;
 }
 
 div[data-container-language] div[data-actual-language] p {
-  float: left;
-  margin-left: 5px;
+  float         : left;
+  margin-left   : 5px;
   padding-bottom: 6px;
-  color: #777;
+  color         : #777;
 }
 
 div[data-container-language] div[data-actual-language] i {
-  height: 15px;
-  width: 25px;
-  background: #555;
-  margin: 0px 0px;
+  height      : 15px;
+  width       : 25px;
+  background  : #555;
+  margin      : 0px 0px;
   margin-right: 0px;
-  float: left;
+  float       : left;
 }
 
 div[data-container-language] ul[data-list-languages]{
-  list-style: none;
-  width: 185px;
-  position: absolute;
-  background: #EFEFEF;
-  border-radius: 1px;
-  box-shadow: 0px 0px 5px #555;
-  margin-top: 24px;
-  margin-left: 6px;
-  padding-top: 3px;
+  list-style    : none;
+  width         : 185px;
+  position      : absolute;
+  background    : #EFEFEF;
+  border-radius : 1px;
+  box-shadow    : 0px 0px 5px #555;
+  margin-top    : 24px;
+  margin-left   : 6px;
+  padding-top   : 3px;
   padding-bottom: 3px;
-  display: none;
+  display       : none;
 }
 
 div[data-container-language]:HOVER ul[data-list-languages]{
-  display: block;
+  display : block;
 }
 
 div[data-container-language] ul[data-list-languages]::before {
-  content: '';
-  position: absolute;
-  width: 0px;
-  height: 0px;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #AAA;
-  margin-top: -11px;
-  margin-left: 10px;
+  content       : '';
+  position      : absolute;
+  width         : 0px;
+  height        : 0px;
+  border-left   : 8px solid transparent;
+  border-right  : 8px solid transparent;
+  border-bottom : 8px solid #AAA;
+  margin-top    : -11px;
+  margin-left   : 10px;
 }
 
 div[data-container-language] ul[data-list-languages] li {
-  margin: 1px 5px;
-  border-radius: 2px;
-  overflow: hidden;
-  line-height: 30px;
-  padding: 0px 5px;
-  cursor: pointer;
+  margin        : 1px 5px;
+  border-radius : 2px;
+  overflow      : hidden;
+  line-height   : 30px;
+  padding       : 0px 5px;
+  cursor        : pointer;
 }
 
 div[data-container-language] ul[data-list-languages] li:hover {
-  background: #DDD;
+  background  : #DDD;
 }
 
 div[data-container-language] ul[data-list-languages] li i {
-  height: 20px;
-  width: 30px;
-  background: #555;
-  margin: 5px 0px;
-  margin-right: 0px;
-  float: left;
-  margin-right: 5px;
+  height        : 20px;
+  width         : 30px;
+  background    : #555;
+  margin        : 5px 0px;
+  margin-right  : 0px;
+  float         : left;
+  margin-right  : 5px;
 }
 
 div[data-container-language] ul[data-list-languages] li p {
-  font-size: 13px;
-  color: #666;
+  font-size : 13px;
+  color     : #666;
 }
