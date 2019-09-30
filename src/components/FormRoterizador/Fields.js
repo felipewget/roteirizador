@@ -15,7 +15,7 @@ class Fields extends Component {
     super();
 
     this.state = {
-      address: null,
+      address: "",
 			lat: null,
 			lng: null,
 			tags: null,
@@ -164,7 +164,6 @@ class Fields extends Component {
     let {
       index,
       type,
-      metadata,
       remove,
       funcButton,
       texts
@@ -205,10 +204,7 @@ class Fields extends Component {
   render() {
 
     let {
-      key,
-      type,
-      metadata,
-      remove
+      type
     } = this.props;
 
     return (

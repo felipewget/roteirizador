@@ -1,6 +1,5 @@
 import React,
       { Component } from 'react';
-import { Link } from 'react-router-dom'
 
 class Footer extends Component {
 
@@ -13,7 +12,7 @@ class Footer extends Component {
 
   render() {
 
-    let { footer_texts, type, texts } = this.props;
+    let { type, texts } = this.props;
 
     return (
       <div

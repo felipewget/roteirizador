@@ -1,16 +1,13 @@
 import React,
-       { Component, Fragment }            from 'react';
-import { Link }                 from 'react-router-dom';
+       { Component }            from 'react';
 import Footer                   from './../../components/Footer';
 import FormRegister             from './../../components/FormRegister';
-import Languages                from './../../components/Languages';
 import { getLanguage }          from './../../components/i18n';
 
 import LoadingScreen            from './../../components/LoadingScreen';
 
 import {  isAuthenticated     } from './../../actions/authAction';
 
-import { compose, withProps, lifecycle } from "recompose";
 
 class Login extends Component {
 

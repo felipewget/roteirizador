@@ -50,7 +50,7 @@ class Languages extends Component {
 
     for( let index in languages_texts ){
 
-      if( languages_texts[ index ].cod == actual_language ){
+      if( languages_texts[ index ].cod === actual_language ){
         language = languages_texts[ index ].name;
       }
 

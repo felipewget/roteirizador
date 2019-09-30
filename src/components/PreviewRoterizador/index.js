@@ -52,8 +52,6 @@ class PreviewRoterizador extends Component {
 
   render() {
 
-    let { directions } = this.props;
-
     return (
       <div data-component="preview-roterizador">
 

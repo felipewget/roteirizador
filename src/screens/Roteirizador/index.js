@@ -1,6 +1,5 @@
 import React,
-       { Component, Fragment }            from 'react';
-import { Link }                 from 'react-router-dom';
+       { Component }            from 'react';
 import Footer                   from './../../components/Footer';
 import Languages                from './../../components/Languages';
 import FormRoterizador          from './../../components/FormRoterizador';
@@ -12,17 +11,13 @@ import { withScriptjs }         from 'react-google-maps';
 import { loadDirections } from './../../actions/mapAction';
 import Map from './../../components/Map';
 
-import BlockApresentation from './components/BlockApresentation';
 import TabHistory         from './components/TabHistory';
-
-import { compose, withProps, lifecycle } from "recompose";
 
 import {  isAuthenticated,
           loggout             } from './../../actions/authAction';
 
 import {  addRoute,
-          listRoutes,
-          getRouteByid        } from './../../actions/routeAction';
+          listRoutes        } from './../../actions/routeAction';
 
 import LoadingScreen            from './../../components/LoadingScreen';
 
@@ -95,7 +90,6 @@ class Roteirizador extends Component {
   renderPage = () => {
 
     let { texts,
-          arr_route,
           directions,
           arr_list_routes }  = this.state;
 
@@ -103,9 +97,6 @@ class Roteirizador extends Component {
 
 
     let MapLoader = withScriptjs(Map);
-
-    let page_texts = texts.page_home;
-    let self = this;
 
     return (
       <div>

@@ -1,6 +1,5 @@
 import React,
        { Component }            from 'react';
-import { Link }                 from 'react-router-dom';
 import Footer                   from './../../components/Footer';
 import { getLanguage }          from './../../components/i18n';
 import Block404                 from './../../components/Block404';
@@ -47,7 +46,6 @@ class Page404 extends Component {
   render() {
 
     let { texts }  = this.state;
-    let page_texts = texts.page_home;
     let { footer, page_404 } = texts;
 
     return (

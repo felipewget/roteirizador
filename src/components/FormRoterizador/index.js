@@ -131,7 +131,7 @@ class FormRoterizador extends Component {
 
   render() {
 
-    let { funcUpdateMap, texts } = this.props;
+    let { texts } = this.props;
 
     return (
       <form data-component="form-roterizador"

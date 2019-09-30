@@ -1,5 +1,5 @@
 import React,
-       { Component, Fragment }            from 'react';
+       { Component }            from 'react';
 import { Link }                 from 'react-router-dom';
 
 import {  register,
@@ -85,7 +85,6 @@ class FormRegister extends Component {
   render()
   {
 
-    let self = this;
     let { email,
           password,
           loading,

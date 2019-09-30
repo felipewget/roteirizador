@@ -1,10 +1,7 @@
 import React,
-       { Component, Fragment }            from 'react';
-import { Link }                 from 'react-router-dom';
+       { Component }            from 'react';
 
 import PerfectScrollbar         from 'react-perfect-scrollbar';
-
-import { compose, withProps, lifecycle } from "recompose";
 
 class TabHistory extends Component {
 
@@ -64,7 +61,7 @@ class TabHistory extends Component {
 
     let { tab_opened } = this.state;
 
-    if( tab_opened == false ){
+    if( tab_opened === false ){
 
       this.setState({
         tab_opened: true

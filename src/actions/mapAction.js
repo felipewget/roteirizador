@@ -39,12 +39,6 @@ export const loadDirections = ( arr_route ) => {
         (result, status) => {
           if (status === window.google.maps.DirectionsStatus.OK) {
 
-            if( result.routes && result.routes[0] && result.routes[0].legs ){
-                console.log('preview' )
-                console.log( result.routes[0].legs );
-                console.log('final' )
-            }
-
             resolve({
               success: true,
               metadata: result

@@ -1,5 +1,5 @@
 import React,
-       { Component, Fragment }            from 'react';
+       { Component }            from 'react';
 import { Link }                 from 'react-router-dom';
 
 import {  login             } from './../../actions/authAction';
@@ -64,7 +64,6 @@ class FormLogin extends Component {
   render()
   {
 
-    let self = this;
     let { email,
           password,
           loading,

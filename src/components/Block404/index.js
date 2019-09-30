@@ -15,7 +15,7 @@ class Block404 extends Component {
 
   render() {
 
-    let { footer_texts, texts } = this.props;
+    let { texts } = this.props;
 
     return (
       <div data-component="block-404">
@@ -26,8 +26,8 @@ class Block404 extends Component {
           <p data-description>{texts.main_description}</p>
           <p data-description>{texts.suggestion_description}</p>
 
-          <p data-link><span>Front-end:</span> <a target="_blank" href="https://github.com/felipewget/roteirizador">https://github.com/felipewget/roteirizador</a></p>
-          <p data-link><span>Back-end:</span> <a target="_blank" href="https://github.com/felipewget/roteirizador-server">https://github.com/felipewget/roteirizador-server</a></p>
+          <p data-link><span>Front-end:</span> <a target="_blank" rel="noopener noreferrer" href="https://github.com/felipewget/roteirizador">https://github.com/felipewget/roteirizador</a></p>
+          <p data-link><span>Back-end:</span> <a target="_blank" rel="noopener noreferrer" href="https://github.com/felipewget/roteirizador-server">https://github.com/felipewget/roteirizador-server</a></p>
 
           <p data-or><span>{texts.or}</span></p>
 
