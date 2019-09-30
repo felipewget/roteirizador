@@ -1,10 +1,10 @@
 # Roteirizador
 
 ![Routerizador Route 1](./src/assets/git/img1.png)
-![Routerizador Route 2](./src/assets/git/img1.png)
-![Insominia Requests](./src/assets/git/img1.png)
-![Register](./src/assets/git/img1.png)
-![Page 404](./src/assets/git/img1.png)
+![Routerizador Route 2](./src/assets/git/img2.png)
+![Insominia Requests](./src/assets/git/img3.png)
+![Register](./src/assets/git/img4.png)
+![Page 404](./src/assets/git/img5.png)
 
 ## Sobre
 
@@ -28,4 +28,5 @@ Este projeto é um roterizador, desenvolvivdo com NodeJs, ReactJs, vinculado com
 ### Observacōes e melhorias
 
 - Não usei Hooks e devia ter usado mais
-- Criar um .env para a rota do backend nas actions
+- Criar um .env para a rota do backend nas actions e tambem keys
+- Subestimei o projeto, pensei que em 5 horas iria estar pronto... e nao subi progressivamente atualizacoes no Git
