@@ -5,6 +5,7 @@
 ![Insominia Requests](./src/assets/git/img3.png)
 ![Register](./src/assets/git/img4.png)
 ![Page 404](./src/assets/git/img5.png)
+![Estrutura](./src/assets/git/img6.png)
 
 ## Sobre
 
@@ -29,4 +30,6 @@ Este projeto é um roterizador, desenvolvivdo com NodeJs, ReactJs, vinculado com
 
 - Não usei Hooks e devia ter usado mais
 - Criar um .env para a rota do backend nas actions e tambem keys
-- Subestimei o projeto, pensei que em 5 horas iria estar pronto... e nao subi progressivamente atualizacoes no Git
+- Subestimei o projeto, pensei que em 5 horas iria estar pronto... e nao subi progressivamente atualizacoes no Git.
+- Vejo muita gente programar em React sem class... entendo o ponto de vista deles
+e consigo programar assim tambem mas fico pensando se é o melhor modo de usar o React
