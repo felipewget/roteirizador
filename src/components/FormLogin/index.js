@@ -2,6 +2,9 @@ import React,
        { Component }          from 'react';
 import { Link }               from 'react-router-dom';
 import {  login             } from './../../actions/authAction';
+import {  checkHasValue,
+          checkPassword,
+          checkEmail         } from './../../utils/formValidate';
 
 import './index.css';
 
@@ -32,6 +35,43 @@ class FormLogin extends Component {
 
   }
 
+  validate()
+  {
+
+    let { email,
+          password } = this.state;
+
+    if( !checkHasValue( email ) || !checkHasValue( password ) ){
+
+      return {
+        validate: false,
+        error   : "Todos os campos sao obrigatórios"
+      }
+
+    }
+
+    if( !checkEmail( email )  ){
+
+      return {
+        validate: false,
+        error   : "Email Inválido"
+      }
+
+    }
+
+    if( !checkPassword( password )  ){
+
+      return {
+        validate: false,
+        error   : "password Inválido ( Deve conter pelo menos 8 caracteres )"
+      }
+
+    }
+
+    return true;
+
+  }
+
   async handleSubmit( e )
   {
 
@@ -40,19 +80,32 @@ class FormLogin extends Component {
 
     e.preventDefault();
 
-    this.setState({
-      loading: true,
-    })
+    let validation = this.validate();
 
-    let response = await login( email, password);
+    if( validation === true ){
 
-    if( response.success && response.metadata && response.metadata.authenticated === true ) {
-      window.location.reload();
+      this.setState({
+        loading: true,
+      })
+
+      let response = await login( email, password);
+
+      if( response.success && response.metadata && response.metadata.authenticated === true ) {
+        window.location.reload();
+      } else {
+
+        this.setState({
+          error: "Login/Senha Incorretos",
+          loading: false,
+        })
+
+      }
+
     } else {
 
       this.setState({
-        error: "Login/Senha Incorretos",
-        loading: false,
+        error   : validation.error,
+        loading : false,
       })
 
     }

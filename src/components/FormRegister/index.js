@@ -3,6 +3,10 @@ import React,
 import { Link }                 from 'react-router-dom';
 import {  register,
           login            }    from './../../actions/authAction';
+import {  checkHasValue,
+          checkPassword,
+          checkEmail,
+          checkFullName         } from './../../utils/formValidate';
 import './../FormLogin/index.css';
 
 class FormRegister extends Component {
@@ -33,6 +37,53 @@ class FormRegister extends Component {
 
   }
 
+  validate()
+  {
+
+    let { email,
+          password,
+          full_name } = this.state;
+
+    if( !checkHasValue( email ) || !checkHasValue( password ) || !checkHasValue( full_name ) ){
+
+      return {
+        validate: false,
+        error   : "Todos os campos sao obrigatórios"
+      }
+
+    }
+
+    if( !checkFullName( full_name )  ){
+
+      return {
+        validate: false,
+        error   : "Digite seu nome completo"
+      }
+
+    }
+
+    if( !checkEmail( email )  ){
+
+      return {
+        validate: false,
+        error   : "Email Inválido"
+      }
+
+    }
+
+    if( !checkPassword( password )  ){
+
+      return {
+        validate: false,
+        error   : "password Inválido ( Deve conter pelo menos 8 caracteres )"
+      }
+
+    }
+
+    return true;
+
+  }
+
   async handleSubmit( e )
   {
 
@@ -42,24 +93,39 @@ class FormRegister extends Component {
           email,
           password } = this.state;
 
-    e.preventDefault();
+    let validation = this.validate();
 
-    this.setState({
-      loading: true,
-    });
+    if( validation === true ){
 
-    let response = await register( full_name, email, password);
+      this.setState({
+        loading: true,
+      });
 
-    if( response.success === true && response.metadata && response.metadata[0] && response.metadata[0]._id ){
+      let response = await register( full_name, email, password);
 
-      response = await login( email, password);
+      if( response.success === true && response.metadata && response.metadata[0] && response.metadata[0]._id ){
 
-      if( response.success && response.metadata && response.metadata.authenticated === true ) {
-        window.location.reload();
+        response = await login( email, password);
+
+        if( response.success && response.metadata && response.metadata.authenticated === true ) {
+          window.location.reload();
+        } else {
+
+          this.setState({
+            error   : "Erro ao tentar logar, pela pagina de login",
+            loading : false,
+          })
+
+        }
+
       } else {
 
+        let error = response.error
+                    ? response.error
+                    : "Erro ao criar sua conta"
+
         this.setState({
-          error   : "Erro ao tentar logar, pela pagina de login",
+          error   : error,
           loading : false,
         })
 
@@ -67,12 +133,8 @@ class FormRegister extends Component {
 
     } else {
 
-      let error = response.error
-                  ? response.error
-                  : "Erro ao criar sua conta"
-
       this.setState({
-        error   : error,
+        error   : validation.error,
         loading : false,
       })
 
