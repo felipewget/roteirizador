@@ -7,7 +7,7 @@
  */
 export const checkEmail = ( email ) => {
 
-  let validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+  let validEmailRegex = RegExp(/^(([^<>()[\].,;:\s@"]+(.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+.)+[^<>()[\].,;:\s@"]{2,})$/i);
 
   return validEmailRegex.test(email)
       ? true
@@ -27,7 +27,7 @@ export const checkFullName = ( full_name ) => {
   full_name = full_name.trim()
 
   let [ name, last_name ] = full_name.split(' ');
-  
+
   return name && name.length > 2 && last_name && last_name.length > 2
       ? true
       : false;

@@ -24,6 +24,17 @@ export default {
       copy: "Roteirizador - © Développé avec beaucoup d'affection par Felipe Oliveira"
     },
 
+    // Form error messages
+    form_error_messages: {
+      all_inputs_is_requited: "Tous les champs sont obligatoires",
+      email_invalid         : "Email invalide",
+      password_invalid      : "Mot de passe invalide (doit comporter au moins 8 caractères)",
+      full_name_invalid     : "Entrez votre nom complet",
+      email_really_exist    : "Email déjà enregistré",
+      adding_value          : "Ajout de valeur à l'entrée",
+      login_invalid         : "Login/Senha invalide"
+    },
+
     // Pagina Login
     page_login: {
       title: "Roteirizador",

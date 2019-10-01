@@ -45,13 +45,15 @@ class Login extends Component {
 
     let { texts } = this.state;
     let { footer,
-          page_register } = texts;
+          page_register,
+          form_error_messages } = texts;
 
     return(
       <div>
 
         <FormRegister
-          texts={page_register} />
+          texts          = {page_register}
+          error_messages = { form_error_messages }  />
 
         <Footer
           type="resize-fixed"

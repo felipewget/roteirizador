@@ -86,7 +86,10 @@ class Roteirizador extends Component {
     let { texts,
           directions,
           arr_list_routes }           = this.state;
-    let { footer, page_roteirizador } = texts;
+    let { footer,
+          page_roteirizador,
+          form_error_messages       } = texts;
+
     let MapLoader                     = withScriptjs(Map);
 
     return (
@@ -109,9 +112,11 @@ class Roteirizador extends Component {
               languages_texts = { texts.all_languages }
               actual_language = { texts.language      } />
 
+
             <FormRoterizador
               funcUpdateMap = { this.updateMap  }
-              texts         = { page_roteirizador.form_roteirizador } />
+              texts         = { page_roteirizador.form_roteirizador }
+              form_error_messages = { form_error_messages } />
 
             <PreviewRoterizador
               directions  = { directions  }
@@ -128,10 +133,10 @@ class Roteirizador extends Component {
         <div data-container-maps>
 
           {
-            <MapLoader
-                  googleMapURL    = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBadM1YaUkhSp7Kki0F-Dj382ZxW-8VZxw"
-                  loadingElement  = { <div /> }
-                  directions      = { directions  } />
+              <MapLoader
+                googleMapURL    = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBadM1YaUkhSp7Kki0F-Dj382ZxW-8VZxw"
+                loadingElement  = { <div /> }
+                directions      = { directions.length === 0 ? null : directions } />
           }
 
         </div>
@@ -152,7 +157,7 @@ class Roteirizador extends Component {
             ? <LoadingScreen />
             : this.renderPage();;
   }
-  
+
 }
 
 export default Roteirizador;

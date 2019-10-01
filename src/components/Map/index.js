@@ -18,28 +18,30 @@ class Map extends Component {
     let { directions } = this.props;
 
     let GoogleMapExample;
-    if( directions && directions !== null ){
+
       GoogleMapExample = withGoogleMap(props => (
         <GoogleMap
           defaultCenter={{ lat: 40.756795, lng: -73.954298 }}
           defaultZoom={13}
         >
-          <DirectionsRenderer
+        {
+          directions && directions !== null
+          ? <DirectionsRenderer
             directions={directions}
           />
+          : null
+        }
         </GoogleMap>
       ));
-    }
+
 
     return (
       <div>
 
         {
-          directions && directions !== null
-          ? <GoogleMapExample
+          <GoogleMapExample
             containerElement={<div data-google-map />}
             mapElement={<div style={{ height: `100%` }} />} />
-          : ""
         }
 
       </div>

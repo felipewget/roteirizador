@@ -39,13 +39,14 @@ class FormLogin extends Component {
   {
 
     let { email,
-          password } = this.state;
+          password }       = this.state;
+    let { error_messages } = this.props;
 
     if( !checkHasValue( email ) || !checkHasValue( password ) ){
 
       return {
         validate: false,
-        error   : "Todos os campos sao obrigatórios"
+        error   : error_messages.all_inputs_is_requited
       }
 
     }
@@ -54,7 +55,7 @@ class FormLogin extends Component {
 
       return {
         validate: false,
-        error   : "Email Inválido"
+        error   : error_messages.email_invalid
       }
 
     }
@@ -63,7 +64,7 @@ class FormLogin extends Component {
 
       return {
         validate: false,
-        error   : "password Inválido ( Deve conter pelo menos 8 caracteres )"
+        error   : error_messages.password_invalid
       }
 
     }
@@ -76,7 +77,8 @@ class FormLogin extends Component {
   {
 
     let { email,
-          password } = this.state;
+          password }        = this.state;
+    let { error_messages }  = this.props;
 
     e.preventDefault();
 
@@ -95,7 +97,7 @@ class FormLogin extends Component {
       } else {
 
         this.setState({
-          error: "Login/Senha Incorretos",
+          error: error_messages.login_invalid,
           loading: false,
         })
 

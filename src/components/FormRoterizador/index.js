@@ -106,9 +106,10 @@ class FormRoterizador extends Component {
 
     e.preventDefault();
 
-    let { funcUpdateMap } = this.props
-    let { route }         = this.state;
-    let data_filled       = true;
+    let { funcUpdateMap,
+          form_error_messages } = this.props
+    let { route }               = this.state;
+    let data_filled             = true;
 
     for( let i in route ){
 
@@ -121,7 +122,8 @@ class FormRoterizador extends Component {
     if( data_filled ){
       funcUpdateMap( route )
     } else {
-      alert("Preencha todos os dados")
+      alert( form_error_messages.all_inputs_is_requited );
+
     }
 
   }

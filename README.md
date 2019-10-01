@@ -29,7 +29,6 @@ Este projeto é um roterizador, desenvolvivdo com NodeJs, ReactJs, vinculado com
 ### Observacōes e melhorias
 
 - Não usei Hooks e devia ter usado mais
-- Criar um .env para a rota do backend nas actions e tambem keys
-- Subestimei o projeto, pensei que em 5 horas iria estar pronto... e nao subi progressivamente atualizacoes no Git.
 - Vejo muita gente programar em React sem class... entendo o ponto de vista deles
 e consigo programar assim tambem mas fico pensando se é o melhor modo de usar o React
+- Adicionar Sweet Alert, um dos forms tem um ALERT

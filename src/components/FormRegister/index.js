@@ -42,22 +42,14 @@ class FormRegister extends Component {
 
     let { email,
           password,
-          full_name } = this.state;
+          full_name }       = this.state;
+    let { error_messages }  = this.props;
 
     if( !checkHasValue( email ) || !checkHasValue( password ) || !checkHasValue( full_name ) ){
 
       return {
         validate: false,
-        error   : "Todos os campos sao obrigatórios"
-      }
-
-    }
-
-    if( !checkFullName( full_name )  ){
-
-      return {
-        validate: false,
-        error   : "Digite seu nome completo"
+        error   : error_messages.all_inputs_is_requited
       }
 
     }
@@ -66,7 +58,7 @@ class FormRegister extends Component {
 
       return {
         validate: false,
-        error   : "Email Inválido"
+        error   : error_messages.email_invalid
       }
 
     }
@@ -75,7 +67,16 @@ class FormRegister extends Component {
 
       return {
         validate: false,
-        error   : "password Inválido ( Deve conter pelo menos 8 caracteres )"
+        error   : error_messages.password_invalid
+      }
+
+    }
+
+    if( !checkFullName( full_name )  ){
+
+      return {
+        validate: false,
+        error   : error_messages.full_name_invalid
       }
 
     }
@@ -91,7 +92,8 @@ class FormRegister extends Component {
 
     let { full_name,
           email,
-          password } = this.state;
+          password }        = this.state;
+    let { error_messages }  = this.props;
 
     let validation = this.validate();
 
@@ -121,8 +123,8 @@ class FormRegister extends Component {
       } else {
 
         let error = response.error
-                    ? response.error
-                    : "Erro ao criar sua conta"
+                    ? response.error === "Email Existe" ? error_messages.email_really_exist : response.error
+                    : "Internal Error"
 
         this.setState({
           error   : error,
