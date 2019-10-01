@@ -13,14 +13,14 @@ class FormRoterizador extends Component {
     this.state = {
       route: [
         {
-          type: "from",
+          type    : "from",
           metadata: null,
-          remove: false,
+          remove  : false,
         },
         {
-          type: "to",
+          type    : "to",
           metadata: null,
-          remove: false,
+          remove   : false,
         }
       ]
     };
@@ -36,11 +36,10 @@ class FormRoterizador extends Component {
   {
 
     let { route } = this.state;
-
     let obj_route = {
-      type: "to",
+      type    : "to",
       metadata: null,
-      remove: true,
+      remove  : true,
     };
 
     route.push( obj_route );
@@ -105,13 +104,12 @@ class FormRoterizador extends Component {
   async handleSubmit( e )
   {
 
-
     e.preventDefault();
 
     let { funcUpdateMap } = this.props
-    let { route } = this.state;
+    let { route }         = this.state;
+    let data_filled       = true;
 
-    let data_filled = true;
     for( let i in route ){
 
       if( route[i].metadata == null ) {

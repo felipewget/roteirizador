@@ -38,7 +38,6 @@ class FormLogin extends Component {
     let { email,
           password } = this.state;
 
-
     e.preventDefault();
 
     this.setState({
@@ -55,6 +54,7 @@ class FormLogin extends Component {
         error: "Login/Senha Incorretos",
         loading: false,
       })
+
     }
 
 
@@ -68,7 +68,7 @@ class FormLogin extends Component {
           loading,
           error     } = this.state;
 
-    let { texts } = this.props;
+    let { texts }     = this.props;
 
     return (
       <div data-component="form-login">
@@ -80,27 +80,32 @@ class FormLogin extends Component {
             ? "loading"
             : ""
           } >
+
           <div data-header>
             <i className="icon-map"></i>
             <h1>{texts.title}</h1>
           </div>
 
           <div data-field>
+
             <i className="icon-mail"></i>
             <input
               type="email"
               value={email}
               onChange={ ( e ) => { this.updateState( "email", e.target.value ) }}
               placeholder={texts.form.email.placeholder}   />
+
           </div>
 
           <div data-field>
+
             <i className="icon-key"></i>
             <input
               type="password"
               value={password}
               onChange={ ( e ) => { this.updateState( "password", e.target.value ) }}
               placeholder={texts.form.password.placeholder}/>
+
           </div>
 
           {

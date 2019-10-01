@@ -1,10 +1,11 @@
-import axios from 'axios';
+import axios                from 'axios';
+import  { URL_BACKEND }     from './../constants';
 
 export const addRoute = async ( obj_route ) => {
 
     let auth_token = localStorage.getItem('auth_token');
 
-    let response = await axios.post('http://localhost:8080/route/create', {
+    let response = await axios.post( URL_BACKEND + 'route/create', {
         token     : auth_token,
         obj_route : obj_route,
     });
@@ -17,7 +18,7 @@ export const listRoutes    = async () => {
 
   let auth_token = localStorage.getItem('auth_token');
 
-  let response = await axios.get('http://localhost:8080/routes', {
+  let response = await axios.get( URL_BACKEND + 'routes', {
     params: {
       token: auth_token,
     }

@@ -25,6 +25,27 @@ div[data-container-language] div[data-actual-language] i {
   float       : left;
 }
 
+div[data-container-language] div[data-actual-language] i[data-cod="pt-br"],
+div[data-container-language] ul[data-list-languages] li i[data-cod="pt-br"] {
+  background  : url('./../../assets/images/brazil.svg')no-repeat;
+}
+
+div[data-container-language] div[data-actual-language] i[data-cod="fr-fr"],
+div[data-container-language] ul[data-list-languages] li i[data-cod="fr-fr"] {
+  background  : url('./../../assets/images/france.svg')no-repeat;
+}
+
+div[data-container-language] div[data-actual-language] i[data-cod="en-us"],
+div[data-container-language] ul[data-list-languages] li i[data-cod="en-us"] {
+  background: url('./../../assets/images/united-states.svg')no-repeat;
+}
+
+div[data-container-language] ul[data-list-languages] li i[data-cod],
+div[data-container-language] div[data-actual-language] i[data-cod] {
+    background-size       : auto 100%;
+    background-position   : center center;
+}
+
 div[data-container-language] ul[data-list-languages]{
   list-style    : none;
   width         : 185px;
@@ -52,7 +73,7 @@ div[data-container-language] ul[data-list-languages]::before {
   border-right  : 8px solid transparent;
   border-bottom : 8px solid #AAA;
   margin-top    : -11px;
-  margin-left   : 10px;
+  margin-left   : 8px;
 }
 
 div[data-container-language] ul[data-list-languages] li {

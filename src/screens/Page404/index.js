@@ -7,18 +7,18 @@ import Block404                 from './../../components/Block404';
 import Particles from 'react-particles-js';
 
 let particles_settings = {
-      particles: {
+      particles : {
         number: {
-          value: 80
+          value : 80
         },
-        size: {
-          value: 2
+        size  : {
+          value :  2
         },
-        line_linked: {
-          shadow: {
+        line_linked : {
+          shadow  : {
             enable: true,
-            color: "#555",
-            blur: 1
+            color : "#555",
+            blur  : 1
           }
         }
       }
@@ -49,10 +49,12 @@ class Page404 extends Component {
   render() {
 
     let { texts }  = this.state;
-    let { footer, page_404 } = texts;
+    let { footer,
+          page_404 } = texts;
 
     return (
       <div>
+
         <Particles
           params={ particles_settings } />
 

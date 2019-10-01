@@ -23,14 +23,16 @@ class Languages extends Component {
   {
 
     let { languages_texts } = this.props;
-    let self = this;
+    let self                = this;
 
     return languages_texts.map( ( language ) => {
 
       return (
-        <li key={language.cod}
+        <li
+          key={language.cod}
             onClick={ () => { self.selectLanguage( language.cod )} }>
-          <i></i>
+          <i
+            data-cod={ language.cod }  ></i>
           <p>{language.name}</p>
         </li>
       );
@@ -61,10 +63,13 @@ class Languages extends Component {
 
   render() {
 
+    let { actual_language } = this.props;
+
     return (
         <div data-container-language>
           <div data-actual-language>
-            <i></i>
+            <i
+              data-cod={actual_language}></i>
             <p>{this.processActualLanguage()}</p>
           </div>
           <ul data-list-languages>

@@ -11,7 +11,7 @@ class TabHistory extends Component {
 
     this.state = {
       tab_opened: false,
-      routes: [],
+      routes    : [],
     }
 
   }
@@ -99,7 +99,6 @@ class TabHistory extends Component {
             <p><span>{texts.block_route.from}</span> { route.route[0] ? route.route[0].metadata.formated_address : "" } </p>
             <p><span>{texts.block_route.to}</span> { route.route[1] ? route.route[1].metadata.formated_address : "" } </p>
             <p><span>{texts.block_route.times_stop}</span> { route.route.length }</p>
-            {/*<button>Visualizar</button>*/}
           </div>
         );
 
@@ -117,12 +116,9 @@ class TabHistory extends Component {
     return (
       <div>
 
-        <div  onClick={ () => { self.openHistoryTab() } }
-              data-container-history={
-              tab_opened === false
-                ? "closed"
-                : ""
-              } >
+        <div
+          onClick={ () => { self.openHistoryTab() } }
+          data-container-history={  tab_opened === false  ? "closed"  : ""  } >
 
           <button
             data-button-history
@@ -131,10 +127,12 @@ class TabHistory extends Component {
           <PerfectScrollbar>
 
             <div data-header>
+
               <p>{texts.title}</p>
               <button
                 className="icon-close"
                 onClick={ () => { self.closeHistoryTab() } }></button>
+
             </div>
 
             <div>
@@ -144,6 +142,7 @@ class TabHistory extends Component {
                   ? this.processHistoryRoute()
                   : this.renderBlockWithoutRoute()
                 }
+                
             </div>
 
           </PerfectScrollbar>

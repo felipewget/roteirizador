@@ -12,17 +12,16 @@ class Footer extends Component {
 
   render() {
 
-    let { type, texts } = this.props;
+    let { type,
+          texts } = this.props;
 
     return (
       <div
         data-component="footer"
-        data-type={ type
-                      ? type
-                      : ""  } >
+        data-type={ type  ? type  : "" } >
 
-          <p>{texts.copy}</p>
-          <i className="icon-home"></i>
+        <p>{texts.copy}</p>
+        <i className="icon-home"></i>
 
       </div>
     );

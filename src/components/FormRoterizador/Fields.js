@@ -12,24 +12,25 @@ class Fields extends Component {
     super();
 
     this.state = {
-      address: "",
-			lat: null,
-			lng: null,
-			tags: null,
+      address   : "",
+			lat       : null,
+			lng       : null,
+			tags      : null,
 			formated_address: null,
-			privacy: null
+			privacy   : null
     }
 
   }
 
   handleChange = address => {
-	    this.setState({ address });
-  	};
+    this.setState({ address });
+  };
 
 	handleSelect = address => {
 
-		let self = this;
-    let { funcUpdate, index } = this.props;
+		let self      = this;
+    let { funcUpdate,
+          index } = this.props;
 
 		self.setState({ address });
 
@@ -90,9 +91,9 @@ class Fields extends Component {
       return ( <label>{texts.label_from.label}</label> )
     } else {
 
-      return remove
-              ? ( <label>{texts.label_stop.label}</label> )
-              : ( <label>{texts.label_to.label}</label> ) ;
+    return remove
+            ? ( <label>{texts.label_stop.label}</label> )
+            : ( <label>{texts.label_to.label}</label> ) ;
 
     }
 
@@ -106,6 +107,7 @@ class Fields extends Component {
               onChange={this.handleChange}
               onSelect={this.handleSelect}
             >
+
             {
               ({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                   <span>
@@ -197,12 +199,9 @@ class Fields extends Component {
 
   }
 
-  //  funcUpdate
   render() {
 
-    let {
-      type
-    } = this.props;
+    let { type  } = this.props;
 
     return (
         <div data-field={ type === "to" ? "with-button" : ""  }>

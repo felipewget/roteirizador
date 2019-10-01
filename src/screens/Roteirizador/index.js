@@ -29,22 +29,23 @@ class Roteirizador extends Component {
     let texts = getLanguage();
 
     this.state = {
-      loading_page: true,
-      texts: texts,
-      arr_route: [],
-      directions: [],
-      arr_list_routes: []
+      loading_page  : true,
+      texts         : texts,
+      arr_route     : [],
+      directions    : [],
+      arr_list_routes : []
     }
 
     this.updateMap    = this.updateMap.bind(this);
 
   }
 
-  async componentDidMount(){
+  async componentDidMount()
+  {
 
-    document.title = "Roteirizador"
+    document.title      = "Roteirizador"
 
-    let auth_response = await isAuthenticated( 'authenticated' );
+    let auth_response   = await isAuthenticated( 'authenticated' );
     let routes_response = await listRoutes();
 
     if( auth_response.metadata && auth_response.metadata.authenticated === true ){
@@ -63,8 +64,8 @@ class Roteirizador extends Component {
 
     let { arr_list_routes } = this.state;
 
-    let response = await loadDirections( arr_route );
-    let response_route = await addRoute( arr_route );
+    let response        = await loadDirections( arr_route );
+    let response_route  = await addRoute( arr_route );
 
     if( response_route.success ){
 
@@ -80,21 +81,13 @@ class Roteirizador extends Component {
 
   }
 
-  closeHistoryTab()
-  {
-
-  }
-
   renderPage = () => {
 
     let { texts,
           directions,
-          arr_list_routes }  = this.state;
-
+          arr_list_routes }           = this.state;
     let { footer, page_roteirizador } = texts;
-
-
-    let MapLoader = withScriptjs(Map);
+    let MapLoader                     = withScriptjs(Map);
 
     return (
       <div>
@@ -113,32 +106,32 @@ class Roteirizador extends Component {
                 }}></button>
 
             <Languages
-              languages_texts={texts.all_languages}
-              actual_language={texts.language}/>
+              languages_texts = { texts.all_languages }
+              actual_language = { texts.language      } />
 
             <FormRoterizador
-              funcUpdateMap={this.updateMap}
-              texts={page_roteirizador.form_roteirizador} />
+              funcUpdateMap = { this.updateMap  }
+              texts         = { page_roteirizador.form_roteirizador } />
 
             <PreviewRoterizador
-              directions={directions}
-              texts={page_roteirizador.preview_roteirizador}/>
+              directions  = { directions  }
+              texts       = { page_roteirizador.preview_roteirizador  } />
 
           </PerfectScrollbar>
 
         </div>
 
         <TabHistory
-          history_routes={arr_list_routes}
-          texts={page_roteirizador.history_routes}/>
+          history_routes  = { arr_list_routes }
+          texts           = { page_roteirizador.history_routes  } />
 
         <div data-container-maps>
 
           {
             <MapLoader
-                  googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBadM1YaUkhSp7Kki0F-Dj382ZxW-8VZxw"
-                  loadingElement={<div />}
-                  directions={directions} />
+                  googleMapURL    = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBadM1YaUkhSp7Kki0F-Dj382ZxW-8VZxw"
+                  loadingElement  = { <div /> }
+                  directions      = { directions  } />
           }
 
         </div>
@@ -159,6 +152,7 @@ class Roteirizador extends Component {
             ? <LoadingScreen />
             : this.renderPage();;
   }
+  
 }
 
 export default Roteirizador;

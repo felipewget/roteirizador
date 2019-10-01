@@ -59,8 +59,8 @@ class FormRegister extends Component {
       } else {
 
         this.setState({
-          error: "Erro ao tentar logar, pela pagina de login",
-          loading: false,
+          error   : "Erro ao tentar logar, pela pagina de login",
+          loading : false,
         })
 
       }
@@ -72,8 +72,8 @@ class FormRegister extends Component {
                   : "Erro ao criar sua conta"
 
       this.setState({
-        error: error,
-        loading: false,
+        error   : error,
+        loading : false,
       })
 
     }
@@ -94,12 +94,10 @@ class FormRegister extends Component {
     return (
       <div data-component="form-login">
 
-        <form data-form-type={
-            loading === true
-            ? "loading"
-            : ""
-          }
-          onSubmit={this.handleSubmit}>
+        <form
+          data-form-type={  loading === true  ? "loading" : ""  }
+          onSubmit={this.handleSubmit}  >
+
           <div data-header>
             <i className="icon-map"></i>
             <h1>{texts.titleå}</h1>

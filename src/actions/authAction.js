@@ -1,4 +1,5 @@
-import axios from 'axios';
+import  axios               from 'axios';
+import  { URL_BACKEND }     from './../constants';
 
 export const isAuthenticated = async ( type = "" ) => {
 
@@ -19,7 +20,7 @@ export const isAuthenticated = async ( type = "" ) => {
 
   }
 
-  let response = await axios.get('http://localhost:8080/auth', {
+  let response = await axios.get( URL_BACKEND + 'auth', {
     params: {
       token: auth_token,
     }
@@ -61,7 +62,7 @@ export const isAuthenticated = async ( type = "" ) => {
 
 export const login = async ( login, password ) => {
 
-  let response = await axios.post('http://localhost:8080/auth', {
+  let response = await axios.post( URL_BACKEND + 'auth', {
       login: login,
       password: password
   });
@@ -80,7 +81,7 @@ export const loggout = async () => {
 
   let auth_token = localStorage.getItem('auth_token');
 
-  let response = await axios.delete('http://localhost:8080/auth', {
+  let response = await axios.delete( URL_BACKEND + 'auth', {
       params: {
         token: auth_token
       }
@@ -92,7 +93,7 @@ export const loggout = async () => {
 
 export const register = async ( full_name, login, password ) => {
 
-  let response = await axios.post('http://localhost:8080/register', {
+  let response = await axios.post( URL_BACKEND + 'register', {
         name: full_name,
         login: login,
         password: password

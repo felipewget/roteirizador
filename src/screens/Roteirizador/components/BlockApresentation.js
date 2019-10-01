@@ -23,13 +23,11 @@ class BlockApresentation extends Component {
     return (
       <div data-container-block-apresentation>
 
-        <div data-container-apresentation={
-          loading
-            ? "loading"
-            : ""
-        }>
+        <div data-container-apresentation={ loading ? "loading" : "" } >
 
-          <h1><span>Felipe Oliveira</span>, seja bem vindo</h1>
+          <h1>
+            <span>Loading</span>, seja bem vindo
+          </h1>
 
           <p>Crie suas proprias rotas otimizadas</p>
 
@@ -43,6 +41,7 @@ class BlockApresentation extends Component {
 
       </div>
     );
+
   }
 }
 

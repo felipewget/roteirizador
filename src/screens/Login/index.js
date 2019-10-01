@@ -20,14 +20,14 @@ class Login extends Component {
 
     this.state = {
       loading_page: true,
-      texts: texts
+      texts       : texts
     }
 
   }
 
   async componentDidMount(){
 
-    document.title = "Roteirizador | Login"
+    document.title    = "Roteirizador | Login"
 
     let auth_response = await isAuthenticated( 'no_authenticated' );
 
@@ -44,7 +44,8 @@ class Login extends Component {
   renderPage = () => {
 
     let { texts } = this.state;
-    let { footer, page_login } = texts;
+    let { footer,
+          page_login } = texts;
 
     return (
       <div>
