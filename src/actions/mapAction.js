@@ -1,3 +1,10 @@
+/**
+ *  Recupera dados de desctions do Google
+ *
+ *  @param obj arr_route
+ *
+ *  @return json
+ */
 export const loadDirections = ( arr_route ) => {
 
   return new Promise( async (resolve, reject) => {

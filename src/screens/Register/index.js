@@ -7,7 +7,7 @@ import LoadingScreen            from './../../components/LoadingScreen';
 import {  isAuthenticated     } from './../../actions/authAction';
 
 /**
- *  Tela de Registrp
+ *  Tela de Registro
  */
 class Login extends Component {
 

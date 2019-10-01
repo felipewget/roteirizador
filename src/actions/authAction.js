@@ -1,6 +1,15 @@
 import  axios               from 'axios';
 import  { URL_BACKEND }     from './../constants';
 
+
+/**
+ *  Verifica se o usuario esta autenticado e redireciona para rotas
+ *  permitidas
+ *
+ *  @param string type authenticated|no_authenticated|""
+ *
+ *  @return json
+ */
 export const isAuthenticated = async ( type = "" ) => {
 
   let auth_token = localStorage.getItem('auth_token');
@@ -60,6 +69,15 @@ export const isAuthenticated = async ( type = "" ) => {
 
 }
 
+
+/**
+ *  Login
+ *
+ *  @param string login<email>
+ *  @param string password
+ *
+ *  @return json
+ */
 export const login = async ( login, password ) => {
 
   let response = await axios.post( URL_BACKEND + 'auth', {
@@ -77,6 +95,12 @@ export const login = async ( login, password ) => {
 
 }
 
+
+/**
+ *  Loggout
+ *
+ *  @return json
+ */
 export const loggout = async () => {
 
   let auth_token = localStorage.getItem('auth_token');
@@ -91,6 +115,16 @@ export const loggout = async () => {
 
 }
 
+
+/**
+ *  Register
+ *
+ *  @param string full_name
+ *  @param string login<email>
+ *  @param string password
+ *
+ *  @return json
+ */
 export const register = async ( full_name, login, password ) => {
 
   let response = await axios.post( URL_BACKEND + 'register', {

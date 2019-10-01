@@ -1,6 +1,13 @@
 import axios                from 'axios';
 import  { URL_BACKEND }     from './../constants';
 
+/**
+ *  Cadastra um registro de rota
+ *
+ *  @param obj obj_route
+ *
+ *  @return json
+ */
 export const addRoute = async ( obj_route ) => {
 
     let auth_token = localStorage.getItem('auth_token');
@@ -14,6 +21,12 @@ export const addRoute = async ( obj_route ) => {
 
 }
 
+
+/**
+ *  Lista minhas rotas
+ *
+ *  @return json
+ */
 export const listRoutes    = async () => {
 
   let auth_token = localStorage.getItem('auth_token');
