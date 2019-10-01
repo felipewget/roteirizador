@@ -164,7 +164,7 @@ class FormRegister extends Component {
 
           <div data-header>
             <i className="icon-map"></i>
-            <h1>{texts.titleå}</h1>
+            <h1>{texts.title}</h1>
           </div>
 
           <div data-field>
